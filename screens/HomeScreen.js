@@ -33,7 +33,9 @@ const styles = StyleSheet.create({
 
     containerBody: {
         flex: 4,
-        backgroundColor: '##03A9F4'
+        backgroundColor: '#455A64',
+        justifyContent: 'center',
+        alignItems:'center',
     },
     containerBar: {
         flex: 1

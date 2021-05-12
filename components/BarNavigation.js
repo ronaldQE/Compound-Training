@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import { Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { Text,Image, TouchableOpacity, StyleSheet } from 'react-native';
 
 class BarNavigation extends Component {
 
@@ -11,21 +11,31 @@ class BarNavigation extends Component {
                 <View style={styles.subContainer}>
                     
                     <TouchableOpacity style={styles.option}>
-                        <Text>A</Text>
+                    <Image style={styles.icoon}
+                    source={require('../assets/iconNavbar/home.svg')}
+                    />
                     </TouchableOpacity>
                     
                     
                     <TouchableOpacity style={styles.option}>
-                        <Text>B</Text>
+                    <Image style={styles.icoon}
+                    source={require('../assets/iconNavbar/stats-dots.svg')}
+                    />
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.option}>
-                        <Text>C</Text>
+                    <Image style={styles.icoon}
+                    source={require('../assets/iconNavbar/rocket.svg')}
+                    />
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.option}>
-                        <Text>D</Text>
+                    <Image style={styles.icoon}
+                    source={require('../assets/iconNavbar/star-full.svg')}
+                    />
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.option}>
-                        <Text>F</Text>
+                    <Image style={styles.icoon}
+                    source={require('../assets/iconNavbar/accessibility.svg')}
+                    />
                     </TouchableOpacity>
                 </View>
 
@@ -51,9 +61,18 @@ const styles = StyleSheet.create({
         
     },
     option:{
+        justifyContent: 'center',
+
         backgroundColor:'#00BCD4',
         //width:50
-        flex:1
+        flex:1,
+        alignItems:'center',
+        
+    },
+    icoon:{
+        width:30,
+        height:30,
+        color:'#FFFFFF',
     }
 });
 export default BarNavigation
