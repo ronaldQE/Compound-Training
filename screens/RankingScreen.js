@@ -2,7 +2,7 @@ import React from 'react'
 import {View,Text} from 'react-native'
 
 
-const RankingUsers = () => {
+const RankingScreen = () => {
     return (
         <View>
             <Text>Ranking de usuarios</Text>
@@ -10,4 +10,4 @@ const RankingUsers = () => {
     )
 }
 
-export default RankingUsers
+export default RankingScreen

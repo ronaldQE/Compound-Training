@@ -12,6 +12,8 @@ import RankingUsers from './screens/RankingScreen';
 import ProgressUser from './screens/ProgressScreen';
 import AchievementsUser from './screens/LogrosScreen';
 import BodySection from './screens/BodySectionScreen';
+import BarNavigation from './navigations/BarNavigation';
+//import BarNavigation from './navigations/BarNavigation';
 
  
 
@@ -30,9 +32,9 @@ function MyStack(){
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <MyStack/>
-    </NavigationContainer>
+    
+      <BarNavigation/>
+    
   );
 }
 

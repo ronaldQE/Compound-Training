@@ -2,7 +2,7 @@ import React from 'react'
 import {View,Text} from 'react-native'
 
 
-const BodySection = () => {
+const BodySectionScreen = () => {
     return (
         <View>
             <Text>Ejercicios Localizados</Text>
@@ -10,4 +10,4 @@ const BodySection = () => {
     )
 }
 
-export default BodySection
+export default BodySectionScreen

@@ -2,7 +2,7 @@ import React from 'react'
 import {View,Text} from 'react-native'
 
 
-const AchievementsUser = () => {
+const LogrosScreen = () => {
     return (
         <View>
             <Text>Logros de uaurios</Text>
@@ -10,4 +10,4 @@ const AchievementsUser = () => {
     )
 }
 
-export default AchievementsUser
+export default LogrosScreen

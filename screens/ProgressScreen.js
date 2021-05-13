@@ -2,7 +2,7 @@ import React from 'react'
 import {View,Text} from 'react-native'
 
 
-const ProgressUser = () => {
+const ProgressScreen = () => {
     return (
         <View>
             <Text>Progreso de usuario</Text>
@@ -10,4 +10,4 @@ const ProgressUser = () => {
     )
 }
 
-export default ProgressUser
+export default ProgressScreen
