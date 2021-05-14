@@ -9,11 +9,17 @@ const HomeScreen = () => {
 
     return (
 
-            <View>
+            <View style={styles.container}> 
                 <Text>Seciones del Usuario</Text>
             </View>
     )
 
 }
 
+const styles = StyleSheet.create({
+    container:{
+        backgroundColor: '#383838',
+        flex:1,
+    }
+})
 export default HomeScreen

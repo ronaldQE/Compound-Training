@@ -2,52 +2,105 @@ import { NavigationContainer } from '@react-navigation/native';
 import React, { Component } from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {StyleSheet } from 'react-native';
+import { Icon } from 'react-native-elements'
 
-import HomeScreen from '../screens/HomeScreen';
-import ProgressScreen from '../screens/ProgressScreen';
-import RankingScreen from '../screens/RankingScreen';
-import LogrosScreen from '../screens/LogrosScreen';
-import BodySectionScreen from '../screens/BodySectionScreen';
+import HomeStack from './HomeStack';
+import ProgressStack from './ProgressStack';
+import RankingStack from './RankingStack';
+import LogrosStack from './LogrosStack';
+import BodySectionStack from './BodySectionStack';
 
 
 const Tab = createBottomTabNavigator()
 
 export default function BarNavigation() {
+   
+    const viewOptions = (route, color)=>{
+        let iconName
+        switch (route.name) {
+            case "inicio":
+                iconName = "arm-flex"
+                break;
+            case "progresion":
+                iconName = "chart-areaspline"
+                break;
+            case "ranking":
+                iconName = "elevator-passenger"
+                break;
+            case "logros":
+                iconName = "trophy"
+                break;
+            case "exerciseSession":
+                iconName = "dumbbell"
+                break;
+            
+            default:
+                break;
+        }
 
+        return(
+            <Icon
+                type="material-community"
+                name={iconName}
+                siza={50}
+                color={color}
+            />
+        )
+    }
 
 
     return (
         <NavigationContainer>
-            <Tab.Navigator>
+            <Tab.Navigator
+                initialRouteName="inicio"
+                tabBarOptions={{
+                    inactiveTintColor:"#ffffff",
+                    activeTintColor:"orange",
+                    style:{
+                        backgroundColor:'#111010',
+                        borderTopColor:'#111010'
+                    }
+                    
+
+                }}
+                screenOptions={({route})=>({
+                    tabBarIcon:({color})=> viewOptions(route, color)
+                })}
+            >
                 <Tab.Screen
-                    name="Inicio"
-                    component={HomeScreen}
-                    option={{ title: "Home" }}
+                    name="inicio"
+                    component={HomeStack}
+                    options={{ title:"Ejercicios" }}
                 />
                <Tab.Screen
-                    name="Progresion"
-                    component={ProgressScreen}
-                    option={{ title: "Home" }}
+                    name="progresion"
+                    component={ProgressStack}
+                    options={{ title: "Progrecion" }}
                 />
                 <Tab.Screen
-                    name="Rancking"
-                    component={RankingScreen}
-                    option={{ title: "Home" }}
+                    name="ranking"
+                    component={RankingStack}
+                    options={{ title: "Ranking" }}
                 />
                 <Tab.Screen
-                    name="Logros"
-                    component={LogrosScreen}
-                    option={{ title: "Home" }}
+                    name="logros"
+                    component={LogrosStack}
+                    options={{ title: "Logros" }}
                 />
                 <Tab.Screen
-                    name="Seccion"
-                    component={BodySectionScreen}
-                    option={{ title: "Home" }}
+                    name="exerciseSession"
+                    component={BodySectionStack}
+                    options={{ title: "Localizado" }}
                 />
             </Tab.Navigator>
         </NavigationContainer>
     );
 
+    
 }
 
-
+const styles = StyleSheet.create({
+    barContainer:{
+        backgroundColor: '#212121'
+    }
+})
