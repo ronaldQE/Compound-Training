@@ -1,6 +1,6 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
-import LogrosScreen from '../screens/LogrosScreen'
+import Attainment from '../screens/Attainment'
 
 
 const Stack = createStackNavigator()
@@ -10,8 +10,14 @@ export default function LogrosStack() {
         <Stack.Navigator>
             <Stack.Screen
                 name="logros"
-                component={LogrosScreen}
-                options={{title:"Logros"}}
+                component={Attainment}
+                options={{
+                    title:"Logros",
+                    headerStyle:{
+                        backgroundColor:"#111010"
+                    },
+                    headerTintColor:"orange",
+                }}
             />
         </Stack.Navigator>
     )

@@ -1,12 +1,15 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
 import { View, Text } from 'react-native'
-import HomeScreen from '../screens/HomeScreen'
+
+import Training from '../screens/Training'
+import {StylesApp} from '../styles/StylesApp';
+
 
 
 const Stack = createStackNavigator()
 
-export default function HomeStack() {
+export default function TrainingStack() {
     return (
         <Stack.Navigator
         
@@ -14,7 +17,7 @@ export default function HomeStack() {
             
             <Stack.Screen
                 name="home"
-                component={HomeScreen}
+                component={Training}
                 options={{
                     title:"Ejercitar Sesiones",
                     headerStyle:{

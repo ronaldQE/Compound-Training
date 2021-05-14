@@ -4,11 +4,12 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {StyleSheet } from 'react-native';
 import { Icon } from 'react-native-elements'
 
-import HomeStack from './HomeStack';
+import TrainingStack from './TrainingStack';
 import ProgressStack from './ProgressStack';
 import RankingStack from './RankingStack';
 import LogrosStack from './LogrosStack';
 import BodySectionStack from './BodySectionStack';
+import ProfileStack from './ProfileStack';
 
 
 const Tab = createBottomTabNavigator()
@@ -32,6 +33,9 @@ export default function BarNavigation() {
                 break;
             case "exerciseSession":
                 iconName = "dumbbell"
+                break;
+            case "profile":
+                iconName = "account-box"
                 break;
             
             default:
@@ -60,8 +64,6 @@ export default function BarNavigation() {
                         backgroundColor:'#111010',
                         borderTopColor:'#111010'
                     }
-                    
-
                 }}
                 screenOptions={({route})=>({
                     tabBarIcon:({color})=> viewOptions(route, color)
@@ -69,7 +71,7 @@ export default function BarNavigation() {
             >
                 <Tab.Screen
                     name="inicio"
-                    component={HomeStack}
+                    component={TrainingStack}
                     options={{ title:"Ejercicios" }}
                 />
                <Tab.Screen
@@ -91,6 +93,11 @@ export default function BarNavigation() {
                     name="exerciseSession"
                     component={BodySectionStack}
                     options={{ title: "Localizado" }}
+                />
+                <Tab.Screen
+                    name="profile"
+                    component={ProfileStack}
+                    options={{ title: "Perfil" }}
                 />
             </Tab.Navigator>
         </NavigationContainer>

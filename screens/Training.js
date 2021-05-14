@@ -1,15 +1,14 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
-//import { ButtonGroup } from 'react-native-elements'
-
-const HomeScreen = () => {
+import {StylesApp} from '../styles/StylesApp';
 
 
+const Training = () => {
 
     return (
 
-            <View style={styles.container}> 
+            <View style={StylesApp.containerScreen}> 
                 <Text>Seciones del Usuario</Text>
             </View>
     )
@@ -22,4 +21,4 @@ const styles = StyleSheet.create({
         flex:1,
     }
 })
-export default HomeScreen
+export default Training

@@ -1,6 +1,6 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
-import ProgressScreen from '../screens/ProgressScreen'
+import Progress from '../screens/Progress'
 
 
 const Stack = createStackNavigator()
@@ -10,8 +10,14 @@ export default function ProgressStack() {
         <Stack.Navigator>
             <Stack.Screen
                 name="progress"
-                component={ProgressScreen}
-                options={{title:"Progresion"}}
+                component={Progress}
+                options={{
+                    title:"Progresion",
+                    headerStyle:{
+                        backgroundColor:"#111010"
+                    },
+                    headerTintColor:"orange",
+                }}
             />
         </Stack.Navigator>
     )

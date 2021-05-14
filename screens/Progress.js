@@ -1,13 +1,15 @@
 import React from 'react'
 import {View,Text} from 'react-native'
 
+import {StylesApp} from '../styles/StylesApp';
 
-const ProgressScreen = () => {
+
+const Progress = () => {
     return (
-        <View>
+        <View style={StylesApp.containerScreen}>
             <Text>Progreso de usuario</Text>
         </View>
     )
 }
 
-export default ProgressScreen
+export default Progress

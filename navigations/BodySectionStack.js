@@ -1,6 +1,6 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
-import BodySectionScreen from '../screens/BodySectionScreen'
+import BodySection from '../screens/BodySection'
 
 
 const Stack = createStackNavigator()
@@ -10,8 +10,14 @@ export default function BodySectionStack() {
         <Stack.Navigator>
             <Stack.Screen
                 name="localizados"
-                component={BodySectionScreen}
-                options={{title:"Ejercicios Localizados"}}
+                component={BodySection}
+                options={{
+                    title:"Ejercicios Localizados",
+                    headerStyle:{
+                        backgroundColor:"#111010"
+                    },
+                    headerTintColor:"orange",
+                }}
             />
         </Stack.Navigator>
     )

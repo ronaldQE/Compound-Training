@@ -1,13 +1,15 @@
 import React from 'react'
 import {View,Text} from 'react-native'
 
+import {StylesApp} from '../styles/StylesApp';
 
-const RankingScreen = () => {
+
+const Ranking = () => {
     return (
-        <View>
+        <View style={StylesApp.containerScreen}>
             <Text>Ranking de usuarios</Text>
         </View>
     )
 }
 
-export default RankingScreen
+export default Ranking
