@@ -1,15 +1,8 @@
 import React from 'react'
 import { TouchableOpacity } from 'react-native';
-import { View, Text, StyleSheet } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 
-import {StylesApp} from '../styles/StylesApp';
-import TrainingSession from '../components/TrainingSession'
-
-
-
-/*function TrainingSession(){
-
- 
+const TrainingSession = () => {
     return (
         <View style={styles.containerComponet}>
             
@@ -28,30 +21,9 @@ import TrainingSession from '../components/TrainingSession'
 
         </View>
     )
- 
-    
-}*/
-
-const Training = () => {
-
-    return (
-
-            <View style={StylesApp.containerScreen}>
-                <View style={{height:20, backgroundColor:'#FFA500', marginBottom:10}}>
-                <Text >Tipo de etrenamento</Text>
-                </View>
-                <View style={{paddingLeft:10, paddingRight:10,}}>
-                <TrainingSession/>
-                <TrainingSession/>
-                <TrainingSession/>
-                <TrainingSession/>
-                <TrainingSession/>
-                </View>
-                
-            </View>
-    )
-
 }
+
+export default TrainingSession
 
 const styles = StyleSheet.create({
     containerComponet:{
@@ -59,7 +31,7 @@ const styles = StyleSheet.create({
         width:'100%',
         height:135,
         borderRadius:5,
-        marginBottom:10,
+        marginBottom:20,
         padding:5,
         
     },
@@ -98,4 +70,3 @@ const styles = StyleSheet.create({
 
     }
 })
-export default Training
