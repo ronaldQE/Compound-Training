@@ -1,3 +1,4 @@
+import color from 'color';
 import React from 'react'
 import { TouchableOpacity } from 'react-native';
 import { StyleSheet, Text, View } from 'react-native'
@@ -8,7 +9,7 @@ const TrainingSession = () => {
             
             <View style={styles.container}>
             <View style={styles.containerTitle}>
-            <Text style={{fontSize:30, padding: 10}}>CALENTAMIENTO</Text>
+            <Text style={{fontSize:30, padding: 10,color:"#F1F1F1",}}>CALENTAMIENTO</Text>
             </View>
             <View style={styles.containerBouton}>
             <TouchableOpacity>Start</TouchableOpacity>
@@ -16,7 +17,7 @@ const TrainingSession = () => {
             </View>
             
             <View style={styles.containerCount}>
-            <Text style={{fontSize:24}}>2/4</Text>
+            <Text style={{fontSize:24,color:"#F1F1F1"}}>2/4</Text>
             </View>
 
         </View>
@@ -27,7 +28,7 @@ export default TrainingSession
 
 const styles = StyleSheet.create({
     containerComponet:{
-        backgroundColor: '#C4C4C4',
+        backgroundColor: "#242424",
         width:'100%',
         height:135,
         borderRadius:5,
@@ -42,15 +43,16 @@ const styles = StyleSheet.create({
     containerTitle:{
         fontSize:100,
         flex:3,
-        alignContent:"center"
+        alignContent:"center",
+        color:"#F1F1F1",
     },
     containerBouton:{
         
         backgroundColor:"none",
+        color:"#FFA500",
         borderColor:"#FFA500",
         borderStyle:"solid",
         borderWidth:2,
-        color:"#FFFFFF",
         padding: 5,
         paddingLeft:30, paddingRight:30,
         flex:1,

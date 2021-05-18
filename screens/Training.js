@@ -1,6 +1,6 @@
 import React from 'react'
 import { TouchableOpacity } from 'react-native';
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Image } from 'react-native'
 
 import {StylesApp} from '../styles/StylesApp';
 import TrainingSession from '../components/TrainingSession'
@@ -37,7 +37,13 @@ const Training = () => {
     return (
 
             <View style={StylesApp.containerScreen}>
-                <View style={{height:20, backgroundColor:'#FFA500', marginBottom:10}}>
+                <View style={{height:200, backgroundColor:"#242424", marginBottom:10}}>
+                
+                <Image 
+                source={require('../assets/imgDisipline/FondoWoman.png')} 
+                style={{with:'200', height:"200"}}
+                />
+                
                 <Text >Tipo de etrenamento</Text>
                 </View>
                 <View style={{paddingLeft:10, paddingRight:10,}}>
