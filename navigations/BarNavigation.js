@@ -10,6 +10,7 @@ import RankingStack from './RankingStack';
 import LogrosStack from './LogrosStack';
 import BodySectionStack from './BodySectionStack';
 import ProfileStack from './ProfileStack';
+import TrainingView from '../screens/TrainingView';
 
 
 const Tab = createBottomTabNavigator()
@@ -71,7 +72,7 @@ export default function BarNavigation() {
             >
                 <Tab.Screen
                     name="inicio"
-                    component={TrainingStack}
+                    component={TrainingView}
                     options={{ title:"Ejercicios" }}
                 />
                <Tab.Screen

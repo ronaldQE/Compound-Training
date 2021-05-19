@@ -7,20 +7,12 @@ import TrainingSession from '../components/TrainingSession'
 
 
 
-const Training = () => {
+const TrainingSessionStart = () => {
 
     return (
 
             <View style={StylesApp.containerScreen}>
-                <View style={{height:200, backgroundColor:"#242424", marginBottom:10}}>
                 
-                <Image 
-                source={require('../assets/imgDisipline/FondoWoman.png')} 
-                style={{with:300, height:200,zIndex:-1}}
-                />
-                <Text style={{ color:"#FFA500", marginTop:-30, zIndex:5, }}>Nivel principiante</Text>
-
-                </View>
                 <ScrollView  style={{paddingLeft:10, paddingRight:10,}}>
                 <TrainingSession/>
                 <TrainingSession/>
@@ -79,4 +71,4 @@ const styles = StyleSheet.create({
 
     }
 })
-export default Training
+export default TrainingSessionStart
