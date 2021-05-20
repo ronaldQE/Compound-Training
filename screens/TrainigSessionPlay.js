@@ -47,7 +47,6 @@ const styles = StyleSheet.create({
     },
     containerBouton:{
         
-        backgroundColor:"none",
         borderColor:"#FFA500",
         borderStyle:"solid",
         borderWidth:2,

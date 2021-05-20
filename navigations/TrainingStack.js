@@ -23,7 +23,7 @@ export default function TrainingStack() {
                     headerStyle:{
                         backgroundColor:"#111010"
                     },
-                    headerTintColor:"orange",
+                    headerTintColor:"#FFA500",
                 }}
                 
             />
