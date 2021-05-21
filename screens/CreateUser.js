@@ -1,78 +1,140 @@
-import  React  from 'react'
-import { View, Button, TextInput, ScrollView, StyleSheet, Text} from 'react-native'
-import { RadioButton} from 'react-native-paper'
-const CreateUser = () =>{
-    const [value, setValue] = React.useState('first');
+import React, { useState } from 'react'
+import { View, Button, TextInput, ScrollView, StyleSheet, Text } from 'react-native'
+import { RadioButton } from 'react-native-paper';
+import createStyles from '../Components/CreateUserStyle/createStyle';
+import StyledButton from "../Components/StyledButton";
+import firebase from '../database/firebase';
+const CreateUser = (props) => {
+    const [state, setState] = useState({
+        name: '',
+        email: '',
+        password: '',
+        height: '',
+        weight: '',
+        sex: ''
+    });
+    const handleText = (name, value) => {
+        setState({ ...state, [name]: value });
+    }
+    const createUser = ()=>{
+        if(state.name ===''){
+            alert('proveer nombre');
+        }else{
+            
+            
+        }
+    }
     return (
-        
-        <ScrollView    style={styles.container}>
-            <Text style={styles.labelTitle}>Registrarse</Text>
+
+        <ScrollView style={styles.container}>
+            <Text style={createStyles.labelTitle}>Registrarse</Text>
             <View style={styles.inputGroup}>
-                <TextInput placeholder="Ingrese Nombre Completo"/>
+                <TextInput style={styles.input}
+                    placeholder="Ingrese Nombre Completo" placeholderTextColor="#FFFFFF"
+                    onChangeText={(value) => handleText('name', value)} />
             </View>
             <View style={styles.inputGroup}>
-                <TextInput placeholder= "Ingrese Email"/>
+                <TextInput style={styles.input}
+                    placeholder="Ingrese Email" placeholderTextColor="#FFFFFF"
+                    onChangeText={(value) => handleText('email', value)}
+                />
             </View>
             <View style={styles.inputGroup}>
-                <TextInput placeholder="Ingrese Contraseña"/>
+                <TextInput style={styles.input}
+                    placeholder="Ingrese Contraseña" placeholderTextColor="#FFFFFF"
+                    onChangeText={(value) => handleText('password', value)}
+                />
             </View>
             <View style={styles.inputGroup}>
-                <TextInput placeholder="Ingrese Estatura"/>
+                <TextInput style={createStyles.input} placeholderTextColor="#FFFFFF"
+                    placeholder="Ingrese Estatura en cm"
+                    onChangeText={(value) => handleText('height', value)}
+                />
             </View>
             <View style={styles.inputGroup}>
-                <TextInput placeholder="Ingrese Peso"/>
+                <TextInput style={styles.input}
+                    placeholder="Ingrese Peso en Kg" placeholderTextColor="#FFFFFF"
+                    onChangeText={(value) => handleText('weight', value)}
+                />
             </View>
             <Text style={styles.labelTitle2}>Seleccione Sexo</Text>
-            
-            <RadioButton.Group style={styles.radioButtons} onValueChange={value => setValue(value)} value={value}>
-                 <RadioButton.Item label="Masculino"/>  
-                 <RadioButton.Item label="Femenino"/>
-            </RadioButton.Group>
+            {/* <RadioButton.Group
+                onValueChange={value => handleText('sex', value)}
+                value={state}
+            >
+                <View>
+                    <Text>First</Text>
+                    <RadioButton value="Masculino" />
+                </View>
+                <View>
+                    <Text>Second</Text>
+                    <RadioButton value="Femenino" />
+                </View>
+            </RadioButton.Group> */}
 
-            <View > 
-                <Button style={styles.registerButton} title="Registrar"/>
-            </View>
-            <View style={styles.cancelButton}>
-                <Button  title="Cancelar"/>
+
+
+             <RadioButton.Group style={styles.radioButtons} onValueChange={value => handleText('sex',value)} value={state}>
+                 <RadioButton.Item value="Masculino" label="Masculino"/>  
+                 <RadioButton.Item  value="Femenino" label="Femenino"/>
+            </RadioButton.Group> 
+
+            <View >
+                <StyledButton
+                    type="secondary"
+                    content={"Registrar"}
+                    onPress={() => props.navigation.navigate('UserLevel', {
+                        name: state.name,
+                        email: state.email,
+                        password: state.password,
+                        height: state.height,
+                        weight: state.weight,
+                        sex: state.sex
+                    })
+                    }
+
+                />
+                <StyledButton
+                    type="primary"
+                    content={"Cancelar"}
+                    onPress={() => {
+                        console.warn('Botón Cancelar presionado')
+                    }
+                    }
+                />
             </View>
         </ScrollView>
-    )   
+    )
 }
 const styles = StyleSheet.create({
     container: {
-        flex:1,
+        flex: 1,
         padding: 35,
-        backgroundColor: '#4F4F4F'
+        backgroundColor: '#383838'
     },
     inputGroup: {
         flex: 1,
         padding: 0,
         marginBottom: 15,
-        borderBottomWidth: 1,
+        borderBottomWidth: 2,
         borderBottomColor: '#FFFFFF',
-        textShadowColor: '#FFFFFF',
+        color: 'white'
     },
-    radioButtons:{
-        flexDirection:'row',
+    radioButtons: {
+        flexDirection: 'row',
         backgroundColor: '#FFFFFF'
     },
-    registerButton:{
-        marginTop: '10%',
-        backgroundColor: '#00aeef',
-        color: '#00aeef',
-        borderColor: '#00aeef'
-        
-    },
-    cancelButton:{
-        marginTop: '5%',
-        color: '#000000'
-    },
-    labelTitle:{
+    labelTitle: {
         textAlign: 'center',
+        color: '#FFFFFF',
+        marginBottom: '5%'
+    },
+    labelTitle2: {
         color: '#FFFFFF'
     },
-    labelTitle2:{
-        color: '#FFFFFF'
+    input:{
+        textShadowColor: '#ffffff',
+        color: '#ffffff'
     }
 
 })

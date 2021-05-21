@@ -3,17 +3,24 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer, StackActions } from '@react-navigation/native';
 import { createStackNavigator} from '@react-navigation/stack'
-import  UserList from './screens/UserList';
-import  UserDetail from './screens/UserDetail';
+import  UserDiscipline from './screens/UserDiscipline';
+import  UserLevel from './screens/UserLevel';
 import  CreateUser from './screens/CreateUser';
-
+import UserGoals from './screens/UserGoals';
+import UserList from './screens/UserList'
   const Stack = createStackNavigator()
 function MyStack(){
   return(
     <Stack.Navigator>
+      <Stack.Screen name= "UserList"component={UserList}/>
       <Stack.Screen name= "CreateUser"component={CreateUser}/>
-      <Stack.Screen name="UserList" component={UserList}/>
-      <Stack.Screen name= "UserDetail"component={UserDetail}/>
+       <Stack.Screen name= "UserLevel"component={UserLevel}/>
+      <Stack.Screen name= "UserGoals"component={UserGoals}/>
+       <Stack.Screen name="UserDiscipline" component={UserDiscipline}/>
+     
+      
+     
+     
       
     </Stack.Navigator>
   );
