@@ -7,7 +7,7 @@ import TrainingSession from '../components/TrainingSession'
 
 
 
-const TrainingSessionStart = () => {
+const TrainingSessionStart = (props) => {
 
     return (
 

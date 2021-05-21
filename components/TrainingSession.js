@@ -1,9 +1,12 @@
 import color from "color";
 import React from "react";
-import { TouchableOpacity } from "react-native";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View,TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native"
 
-const TrainingSession = () => {
+
+
+const TrainingSession = (props) => {
+  const navigation=useNavigation();
   return (
     <View style={styles.containerComponet}>
       <View style={styles.container}>
@@ -13,7 +16,10 @@ const TrainingSession = () => {
           </Text>
         </View>
         <View>
-          <TouchableOpacity style={styles.containerBouton}>
+          <TouchableOpacity 
+          style={styles.containerBouton} 
+          onPress={()=>navigation.navigate('start')}
+          >
             <Text style={{ fontSize: 20, color: "#FFA500" }}>Start</Text>
           </TouchableOpacity>
         </View>

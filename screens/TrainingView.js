@@ -9,23 +9,23 @@ import TrainingSessionStart from "./TrainingSessionStart";
 const Stack = createStackNavigator();
 const TrainingView = () => {
   return (
-      <Stack.Navigator>
-        <Stack.Screen
-          name="start"
-          component={TrainingSessionStart}
-          options={{
-            title: "Iniciar Sesiones",
-            headerStyle: {
-              backgroundColor: "#111010",
-            },
-            headerTintColor: "#f1f1f1",
-          }}
-        />
+    <Stack.Navigator>
       <Stack.Screen
         name="home"
         component={Training}
         options={{
           title: "Ejercitar Sesiones",
+          headerStyle: {
+            backgroundColor: "#111010",
+          },
+          headerTintColor: "#f1f1f1",
+        }}
+      />
+      <Stack.Screen
+        name="start"
+        component={TrainingSessionStart}
+        options={{
+          title: "Iniciar Sesiones",
           headerStyle: {
             backgroundColor: "#111010",
           },
