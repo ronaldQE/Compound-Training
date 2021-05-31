@@ -27,7 +27,7 @@ export default function BarNavigation() {
                 iconName = "chart-areaspline"
                 break;
             case "ranking":
-                iconName = "elevator-passenger"
+                iconName = "trophy-award"
                 break;
             case "logros":
                 iconName = "trophy"
@@ -60,7 +60,7 @@ export default function BarNavigation() {
                 initialRouteName="inicio"
                 tabBarOptions={{
                     inactiveTintColor:"#ffffff",
-                    activeTintColor:"orange",
+                    activeTintColor:"#FFA500",
                     style:{
                         backgroundColor:'#111010',
                         borderTopColor:'#111010'

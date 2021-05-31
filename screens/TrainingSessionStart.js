@@ -3,7 +3,7 @@ import { TouchableOpacity } from 'react-native';
 import { View, Text, StyleSheet, Image,ScrollView } from 'react-native'
 
 import {StylesApp} from '../styles/StylesApp';
-import TrainingSession from '../components/TrainingSession'
+import Session from '../components/Session'
 
 
 
@@ -14,11 +14,9 @@ const TrainingSessionStart = (props) => {
             <View style={StylesApp.containerScreen}>
                 
                 <ScrollView  style={{paddingLeft:10, paddingRight:10,}}>
-                <TrainingSession/>
-                <TrainingSession/>
-                <TrainingSession/>
-                <TrainingSession/>
-                <TrainingSession/>
+                <Session/>
+                <Session/>
+                <Session/>
                 </ScrollView>
                 
             </View>

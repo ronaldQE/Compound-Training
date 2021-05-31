@@ -33,7 +33,7 @@ const TrainingView = () => {
         }}
       />
       <Stack.Screen
-        name="RankingUsers"
+        name="sessionPlay"
         component={TrainingSessionPlay}
         options={{
           title: "Iniciar Sesiones",
