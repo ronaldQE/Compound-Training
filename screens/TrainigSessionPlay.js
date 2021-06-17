@@ -3,7 +3,7 @@ import { TouchableOpacity } from 'react-native';
 import { View, Text, StyleSheet, Image,ScrollView } from 'react-native'
 
 import {StylesApp} from '../styles/StylesApp';
-import TrainingSession from '../components/TrainingSession'
+import Session from '../components/Session'
 
 
 
@@ -14,11 +14,13 @@ const TrainingSessionPlay = () => {
             <View style={StylesApp.containerScreen}>
                 
                 <ScrollView  style={{paddingLeft:10, paddingRight:10,}}>
-                <TrainingSession/>
-                <TrainingSession/>
-                <TrainingSession/>
-                <TrainingSession/>
-                <TrainingSession/>
+                <Session/>
+                <View style={{textAlign:'center', alignItems:"center"}}>
+                <View style={styles.containerTime}>
+                    <Text style={styles.timeTex}>00:00</Text>
+                </View>
+
+                </View>
                 </ScrollView>
                 
             </View>
@@ -36,9 +38,27 @@ const styles = StyleSheet.create({
         padding:5,
         
     },
-    container:{
+    timeTex:{
         alignItems:"center",
-        
+        alignContent:'center',
+        fontSize:60,
+        color: '#F1F1F1',
+        paddingTop:50,
+        //backgroundColor:'#445554',
+    },
+    containerTime:{
+        marginTop:50,
+        color: '#F1F1F1',
+        borderRadius:'50%',
+        borderWidth:8,
+        borderColor: '#F1F1F1',
+        alignItems:"center",
+        textAlignVertical:'center',
+        width:200,
+        height:200,
+       // backgroundColor:'#444444',
+
+
     },
     containerTitle:{
         fontSize:100,
@@ -59,15 +79,5 @@ const styles = StyleSheet.create({
 
 
     },
-    containerCount:{
-        fontSize:20,
-        borderRadius:10,
-        //flex:1,
-        alignItems:"flex-end",
-        marginRight:0,
-        paddingRight:10,
-
-
-    }
 })
 export default TrainingSessionPlay

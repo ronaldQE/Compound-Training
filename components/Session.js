@@ -5,6 +5,7 @@ import { useNavigation } from "@react-navigation/native"
 
 const Session = () => {
     const navigation = useNavigation();
+    const iconPlay = "../assets/iconComponet/play.png";
 
     return (
         <View style={styles.containerComponet}>
@@ -64,9 +65,6 @@ const styles = StyleSheet.create({
 
     },
     containerCount: {
-        //fontSize: 20,
-        //borderRadius: 10,
-        //flex:1,
         alignItems: "flex-end",
         marginRight: 0,
         paddingRight: 10,

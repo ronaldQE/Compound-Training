@@ -6,7 +6,6 @@ import {StylesApp} from '../styles/StylesApp';
 import Session from '../components/Session'
 
 
-
 const TrainingSessionStart = (props) => {
 
     return (

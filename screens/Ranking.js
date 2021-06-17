@@ -1,5 +1,6 @@
 import React from 'react'
-import {View,Text} from 'react-native'
+import { View, Text, StyleSheet, Image,ScrollView } from 'react-native'
+import UserRanking from '../components/UserRanking';
 
 import {StylesApp} from '../styles/StylesApp';
 
@@ -7,7 +8,20 @@ import {StylesApp} from '../styles/StylesApp';
 const Ranking = () => {
     return (
         <View style={StylesApp.containerScreen}>
-            <Text>Ranking de usuarios</Text>
+            <ScrollView  style={{paddingLeft:10, paddingRight:10,}}>
+            <UserRanking/>
+            <UserRanking/>
+            <UserRanking/>
+            <UserRanking/>
+            <UserRanking/>
+            <UserRanking/>
+            <UserRanking/>
+            <UserRanking/>
+            <UserRanking/>
+            <UserRanking/>
+            <UserRanking/>
+
+            </ScrollView>
         </View>
     )
 }
