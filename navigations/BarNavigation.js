@@ -11,6 +11,7 @@ import LogrosStack from './LogrosStack';
 import BodySectionStack from './BodySectionStack';
 import ProfileStack from './ProfileStack';
 import TrainingView from '../screens/TrainingView';
+import BodySectionView from '../screens/BodySectionView';
 
 
 const Tab = createBottomTabNavigator()
@@ -92,7 +93,7 @@ export default function BarNavigation() {
                 />
                 <Tab.Screen
                     name="exerciseSession"
-                    component={BodySectionStack}
+                    component={BodySectionView}
                     options={{ title: "Localizado" }}
                 />
                 <Tab.Screen

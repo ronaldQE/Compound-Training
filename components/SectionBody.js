@@ -1,18 +1,25 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 const SectionBody = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.containerComponet}>
-      <View>
-        <Image
-          source={require("../assets/iconComponet/abdomen.png")}
-          style={{ with: 20, height: 24 }}
-        />
-      </View>
-      <View>
-        <Text>Seccion</Text>
-      </View>
+      <TouchableOpacity
+        style={styles.containerBouton}
+        onPress={() => navigation.navigate("start")}
+      >
+        <View style={styles.contentIcon}>
+          <Image
+            source={require("../assets/iconComponet/abdomen.png")}
+            style={{ with: 100, height: 100 }}
+          />
+        </View>
+        <View>
+          <Text style={styles.title}>Seccion</Text>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -22,24 +29,25 @@ export default SectionBody;
 const styles = StyleSheet.create({
   containerComponet: {
     backgroundColor: "#242424",
-    width: 400,
-    height: 400,
+    width: 180,
+    height: 180,
     borderRadius: 5,
     marginTop: 5,
-    padding: 5,
+    padding: 10,
     alignItems: "center",
     alignContent: "center",
     textAlignVertical: "center",
-    paddingTop: 10,
+    paddingTop: 25,
     paddingBottom: 10,
     //alignContent:"center"
   },
   contentIcon: {
-    width: 300,
-    height: 300,
+    width: 100,
+    height: 100,
   },
-  conteTitle: {
+  title: {
     textAlign: "center",
     fontSize: 20,
+    color: "#F1F1F1",
   },
 });
