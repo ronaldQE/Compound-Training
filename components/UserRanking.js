@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Avatar } from "react-native-elements";
 
-const UserRanking = () => {
+const UserRanking = (props) => {
   return (
     <View style={styles.containerComponet}>
       <View style={styles.contenAvatar}>
@@ -13,9 +13,9 @@ const UserRanking = () => {
         />
       </View>
       <View style={styles.contenInfo}>
-        <Text style={styles.position}>1</Text>
-        <Text style={styles.name}>Randy Orton</Text>
-        <Text style={styles.points}>pts: 1520</Text>
+        <Text style={styles.position}>{props.position}</Text>
+        <Text style={styles.name}>{props.nameUser}</Text>
+        <Text style={styles.points}>pts: {props.points}</Text>
       </View>
     </View>
   );

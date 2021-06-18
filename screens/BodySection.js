@@ -11,26 +11,26 @@ const BodySection = () => {
                 <View style={{ alignItems: "center", padding: 5 }}>
                     <View style={styles.contentTwo}>
                         <View style={styles.contentBotton}>
-                            <SectionBody />
+                            <SectionBody title="Abdomen"/>
                         </View>
                         <View style={styles.contentBotton}>
-                            <SectionBody />
-                        </View>
-                    </View>
-                    <View style={styles.contentTwo}>
-                        <View style={styles.contentBotton}>
-                            <SectionBody />
-                        </View>
-                        <View style={styles.contentBotton}>
-                            <SectionBody />
+                            <SectionBody title="Pecho"/>
                         </View>
                     </View>
                     <View style={styles.contentTwo}>
                         <View style={styles.contentBotton}>
-                            <SectionBody />
+                            <SectionBody title="Espalda"/>
                         </View>
                         <View style={styles.contentBotton}>
-                            <SectionBody />
+                            <SectionBody title="Piernas"/>
+                        </View>
+                    </View>
+                    <View style={styles.contentTwo}>
+                        <View style={styles.contentBotton}>
+                            <SectionBody title="Brazos"/>
+                        </View>
+                        <View style={styles.contentBotton}>
+                            <SectionBody title="Cintura"/>
                         </View>
                     </View>
                 </View>

@@ -13,9 +13,16 @@ const TrainingSessionStart = (props) => {
             <View style={StylesApp.containerScreen}>
                 
                 <ScrollView  style={{paddingLeft:10, paddingRight:10,}}>
-                <Session/>
-                <Session/>
-                <Session/>
+                <Session
+                description = "Descripcion del ejercicio, ejemplo: oxilar los braszo sobre la cabeza"
+                />
+                <Session
+                description = "Descripcion del ejercicio, ejemplo: oxilar los braszo sobre la cabeza"
+                />
+                <Session
+                description = "Descripcion del ejercicio, ejemplo: oxilar los braszo sobre la cabeza"
+                />
+                
                 </ScrollView>
                 
             </View>

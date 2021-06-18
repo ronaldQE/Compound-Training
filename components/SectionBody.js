@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-const SectionBody = () => {
+const SectionBody = (props) => {
   const navigation = useNavigation();
   return (
     <View style={styles.containerComponet}>
@@ -17,7 +17,7 @@ const SectionBody = () => {
           />
         </View>
         <View>
-          <Text style={styles.title}>Seccion</Text>
+          <Text style={styles.title}>{props.title}</Text>
         </View>
       </TouchableOpacity>
     </View>

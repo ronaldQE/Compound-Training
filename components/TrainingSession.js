@@ -12,7 +12,7 @@ const TrainingSession = (props) => {
       <View style={styles.container}>
         <View style={styles.containerTitle}>
           <Text style={{ fontSize: 30, padding: 10, color: "#F1F1F1" }}>
-            CALENTAMIENTO
+            {props.titleSession}
           </Text>
         </View>
         <View>
@@ -26,7 +26,7 @@ const TrainingSession = (props) => {
       </View>
 
       <View style={styles.containerCount}>
-        <Text style={{ fontSize: 24, color: "#F1F1F1" }}>2/4</Text>
+        <Text style={{ fontSize: 24, color: "#F1F1F1" }}>{props.numSessionDo}/{props.numSession}</Text>
       </View>
     </View>
   );

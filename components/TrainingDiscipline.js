@@ -1,13 +1,13 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 
-const TrainingDiscipline = () => {
+const TrainingDiscipline = (props) => {
   return (
     <View style={styles.container}>
     <View style={styles.contentTitle}>
     </View>
     <View style={styles.discipline}>
-    <Text style={{ color: "#FFFFFF", marginTop: -44, zIndex:10, fontSize:24 }}>Calistenia</Text>
+    <Text style={{ color: "#FFFFFF", marginTop: -44, zIndex:10, fontSize:24 }}>{props.discipline}</Text>
 
     </View>
       <Image
@@ -15,7 +15,7 @@ const TrainingDiscipline = () => {
         style={{ with: 300, height: 200, zIndex: -4,marginTop: -110 }}
       />
       <Text style={{ color: "#FFA500", marginTop: -30, zIndex: 5, marginLeft:10}}>
-        Nivel principiante
+        Nivel {props.nevelUser}
       </Text>
     </View>
   );

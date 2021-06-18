@@ -9,13 +9,37 @@ import TrainingDiscipline from "../components/TrainingDiscipline";
 const Training = () => {
   return (
     <View style={StylesApp.containerScreen}>
-      <TrainingDiscipline/>
+      <TrainingDiscipline
+      discipline="Caslistenia"
+      nevelUser="Princitiante"
+      />
       <ScrollView style={{ paddingLeft: 10, paddingRight: 10 }}>
-        <TrainingSession />
-        <TrainingSession />
-        <TrainingSession />
-        <TrainingSession />
-        <TrainingSession />
+        <TrainingSession 
+        titleSession="CALENTAMIENTO"
+        numSessionDo="4"
+        numSession="4"
+        />
+        <TrainingSession 
+        titleSession="SESION 1"
+        numSessionDo="3"
+        numSession="4"
+        />
+        <TrainingSession 
+        titleSession="SESION 2"
+        numSessionDo="2"
+        numSession="4"
+        />
+        <TrainingSession 
+        titleSession="SESION 3"
+        numSessionDo="1"
+        numSession="4"
+        />
+        <TrainingSession 
+        titleSession="SESION 4"
+        numSessionDo="0"
+        numSession="4"
+        />
+        
       </ScrollView>
     </View>
   );

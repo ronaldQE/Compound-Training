@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native"
 
 
-const Session = () => {
+const Session = (props) => {
     const navigation = useNavigation();
     const iconPlay = "../assets/iconComponet/play.png";
 
@@ -14,7 +14,7 @@ const Session = () => {
             </View>
             <View>
                     <Text style={{ fontSize: 14, padding: 5, color: "#F1F1F1" }}>
-                        Descripcion del ejercicio, ejemplo: oxilar los braszo sobre la cabeza
+                        {props.description}
                     </Text>
             </View>
 
