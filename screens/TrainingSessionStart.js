@@ -3,7 +3,9 @@ import { TouchableOpacity } from 'react-native';
 import { View, Text, StyleSheet, Image,ScrollView } from 'react-native'
 
 import {StylesApp} from '../styles/StylesApp';
-import Session from '../components/Session'
+import Session from '../components/Session';
+import iconSessionStatus from '../assets/iconComponet/iconSessionStatus'
+
 
 
 const TrainingSessionStart = (props) => {
@@ -15,12 +17,18 @@ const TrainingSessionStart = (props) => {
                 <ScrollView  style={{paddingLeft:10, paddingRight:10,}}>
                 <Session
                 description = "Descripcion del ejercicio, ejemplo: oxilar los braszo sobre la cabeza"
+                icon={iconSessionStatus.iconCkeck}
+
                 />
                 <Session
                 description = "Descripcion del ejercicio, ejemplo: oxilar los braszo sobre la cabeza"
+                icon={iconSessionStatus.iconPlay}
+
                 />
                 <Session
                 description = "Descripcion del ejercicio, ejemplo: oxilar los braszo sobre la cabeza"
+                icon={iconSessionStatus.iconPlay}
+
                 />
                 
                 </ScrollView>

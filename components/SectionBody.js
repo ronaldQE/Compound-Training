@@ -1,9 +1,11 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import imgPiernas from "../assets/iconComponet/abdomen.png"
 
 const SectionBody = (props) => {
   const navigation = useNavigation();
+  let imgPiernas = "../assets/iconComponet/abdomen.png";
   return (
     <View style={styles.containerComponet}>
       <TouchableOpacity
@@ -12,7 +14,7 @@ const SectionBody = (props) => {
       >
         <View style={styles.contentIcon}>
           <Image
-            source={require("../assets/iconComponet/abdomen.png")}
+            source={props.img}
             style={{ with: 100, height: 100 }}
           />
         </View>

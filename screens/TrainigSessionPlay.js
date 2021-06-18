@@ -3,7 +3,8 @@ import { TouchableOpacity } from 'react-native';
 import { View, Text, StyleSheet, Image,ScrollView } from 'react-native'
 
 import {StylesApp} from '../styles/StylesApp';
-import Session from '../components/Session'
+import Session from '../components/Session';
+import iconSessionStatus from '../assets/iconComponet/iconSessionStatus'
 
 
 
@@ -14,7 +15,10 @@ const TrainingSessionPlay = () => {
             <View style={StylesApp.containerScreen}>
                 
                 <ScrollView  style={{paddingLeft:10, paddingRight:10,}}>
-                <Session/>
+                <Session
+                description="decricion del ejercicio que esta en ejecucion en este preciso momento"
+                icon={iconSessionStatus.iconTime}
+                />
                 <View style={{textAlign:'center', alignItems:"center"}}>
                 <View style={styles.containerTime}>
                     <Text style={styles.timeTex}>00:00</Text>

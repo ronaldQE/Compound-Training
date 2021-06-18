@@ -5,7 +5,7 @@ import { useNavigation } from "@react-navigation/native"
 
 const Session = (props) => {
     const navigation = useNavigation();
-    const iconPlay = "../assets/iconComponet/play.png";
+    //const iconPlay = "../assets/iconComponet/play.png";
 
     return (
         <View style={styles.containerComponet}>
@@ -24,8 +24,8 @@ const Session = (props) => {
                         onPress={() => navigation.navigate('sessionPlay')}
                     >
                         <Image 
-                        source={require("../assets/iconComponet/play.png")}
-                        style={{ with: 20, height: 24,}}
+                        source={props.icon}
+                        style={{ with: 24, height: 28,}}
                         >
 
                         </Image>
@@ -60,8 +60,8 @@ const styles = StyleSheet.create({
 
     },
     containerBouton: {
-        height:24,
-        width:20,
+        height:26,
+        width:26,
 
     },
     containerCount: {
